@@ -137,6 +137,13 @@ button {
     background: rgba(246, 235, 235, 0.5);
     margin: 10px 30px 30px 0; 
     box-shadow: 10px 10px 5px grey;
+    transition:all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+input:hover {
+  transform: translateY(-4px) scale(1.03);
 }
 
 textarea {
@@ -157,5 +164,11 @@ justify-content: space-around;
     background: rgba(246, 235, 235, 0.5);
     margin: 10px 30px 30px 0; 
     box-shadow: 10px 10px 5px grey;
+    transition:all 0.5s;
+    position: relative;
+    z-index: 1;
+}
 
+textarea:hover {
+  transform: translateY(-4px) scale(1.03);
 }

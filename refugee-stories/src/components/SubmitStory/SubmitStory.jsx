@@ -36,7 +36,7 @@ const SubmitStory = ({errors, touched, values, status }) => {
                 <p className='error'>{errors.email}</p>
             )}
 
-            <Field name='title' type='text' placeholder='Title' />
+            <Field name='title' type='text' placeholder='Title of Your Story' />
 
            {touched.title && errors.title && (
                <p className='error'>{errors.title}</p>
