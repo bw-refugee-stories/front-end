@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import '../../index.css'
 import axios from 'axios';
-import {Form, Field, withFormik} from 'formik';
-import MoleculeTextareaField from '@s-ui/react-molecule-textarea-field'
+import {Form, Field,  withFormik} from 'formik';
+// import MoleculeTextareaField from '@s-ui/react-molecule-textarea-field';
+// import MoleculeInputField from '@s-ui/react-molecule-input-field';
 import * as yup from 'yup';
+
 
 const SubmitStory = ({errors, touched, values, status }) => {
 
@@ -21,7 +24,7 @@ const SubmitStory = ({errors, touched, values, status }) => {
             <h2>Tell Us Your Story!</h2>
 
         <Form>
-           <Field name='name' type='text' placeholder='Your name' />
+           <Field component= 'input' name='name' type='text' placeholder='Your name' />
 
            {touched.name && errors.name && (
                <p className='error'>{errors.name}</p>
@@ -39,14 +42,14 @@ const SubmitStory = ({errors, touched, values, status }) => {
                <p className='error'>{errors.title}</p>
            )}
 
-            <MoleculeTextareaField id='story' label='' name='story' type='text' placeholder='Enter your story...' />
+            <Field component='textarea' name='story' type='text' placeholder='Enter your story...' />
 
            {touched.story && errors.story && (
                <p className='error'>{errors.story}</p>
            )}
 
 
-           <MoleculeTextareaField  id='comment' label='' name='comment' type='text' placeholder='Your comment' />
+           <Field  component='textarea' name='comment' type='text' placeholder='Your comment' />
 
            {touched.comment && errors.comment && (
                <p className='error'>{errors.comment}</p>
