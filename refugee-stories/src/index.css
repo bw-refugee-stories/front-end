@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin-top: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,6 +16,7 @@ code {
 
 .home-page {
   font-family: 'Open Sans', sans-serif;
+  margin-top: 10px;
 }
 
 .home-page h2 {
@@ -27,6 +28,14 @@ code {
 
 .home-page img {
     width: 60%;
+    box-shadow: 10px 10px 5px grey;
+    transition:all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.home-page img:hover {
+  transform: translateY(-4px) scale(1.03);
 }
 
 .app-header h1 {
@@ -38,9 +47,25 @@ code {
   margin: 0 0;
 }
 
-.story-form h2{
+.story-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /* max-width: 50%;  */
+  margin: 0 auto; 
+  /* border: 2px solid red;  */
+  /* border-radius: 4px;  */
+  /* padding: 10px 10px 15px; */
+}
+
+
+.story-form h2 {
+  padding-top: 15px;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 40px;
   text-shadow: 5px 5px 5px #aaa;
   color: rgba(33, 123, 175, 0.924)
 }
@@ -49,11 +74,68 @@ code {
   display: flex;
   justify-content: center;
   border-style: hidden;
+ 
 }
 
 .ui.menu:first-child {
   font-size: 25px;
   background: rgba(169, 226, 236, 0.931);
   font-family: 'Open Sans', sans-serif;
+  text-shadow: 5px 5px 5px #aaa;
   margin: 0 0;
+ 
+}
+
+
+
+button {
+  border: 1px dotted rgb(97, 93, 93);
+    border-radius: 10px;
+    font-family : sans-serif;
+    font-size   : 100%;
+    padding      : 15px 10px 5px 5px;
+    font         : bold .6em sans-serif;
+    border       : 2px solid #333;
+    border-radius: 5px;
+    background   : none;
+    cursor       : pointer;
+    -webkit-appearance: none;
+   -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  button:after {
+    content: " >>>";
+  }
+  
+  button:hover,
+  button:focus {
+    outline   : none;
+    background: #000;
+    color   : #FFF;
+  }
+  
+  input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid rgb(100, 88, 88); 
+    -webkit-box-shadow: 
+      inset 0 0 10px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 10px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 10px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);  
+    padding: 10px 15px;
+    background: rgba(246, 235, 235, 0.5);
+    margin: 10px 30px 30px 0; 
+    box-shadow: 10px 10px 5px grey;
 }

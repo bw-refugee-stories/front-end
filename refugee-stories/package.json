@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@s-ui/react-molecule-textarea-field": "^2.1.0",
     "axios": "^0.19.0",
+    "formik": "^1.5.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "semantic-ui": "^2.4.2",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.1"
+    "semantic-ui-react": "^0.88.1",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",

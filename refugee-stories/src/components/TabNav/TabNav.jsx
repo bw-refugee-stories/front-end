@@ -3,7 +3,7 @@ import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 // import CharacterList from './CharacterList.js';
 // import EpisodeList from './EpisodeList.js';
-import { Divider, Tab } from "semantic-ui-react";
+import { Tab } from "semantic-ui-react";
 // import { NavLink } from "react-router-dom";
 
 // TODO: Add missing tabs below

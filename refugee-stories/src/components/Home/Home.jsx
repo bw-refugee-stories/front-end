@@ -8,7 +8,7 @@ const Home = () => {
     return ( 
       <div className='home-page'>
         <section>
-            <h2>The Voices of Refugees</h2>
+            <h2>Voices of Refugees</h2>
             <img
                 className='main-img'
                 src={Image}
