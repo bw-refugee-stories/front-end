@@ -5,9 +5,55 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(206, 211, 144, 0.931);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.home-page {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.home-page h2 {
+  font-weight: bold;
+  font-size: 48px;
+  text-shadow: 5px 5px 5px #aaa;
+  color: rgba(33, 123, 175, 0.924)
+}
+
+.home-page img {
+    width: 60%;
+}
+
+.app-header h1 {
+  font-weight: bold;
+  font-size: 48px;
+  text-shadow: 5px 5px 5px #aaa;
+  color: rgba(33, 123, 175, 0.924);
+  background: rgba(169, 226, 236, 0.931);
+  margin: 0 0;
+}
+
+.story-form h2{
+  font-weight: bold;
+  font-size: 48px;
+  text-shadow: 5px 5px 5px #aaa;
+  color: rgba(33, 123, 175, 0.924)
+}
+.ui.menu {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  border-style: hidden;
+}
+
+.ui.menu:first-child {
+  font-size: 25px;
+  background: rgba(169, 226, 236, 0.931);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 0;
 }
