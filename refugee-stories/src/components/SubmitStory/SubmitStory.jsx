@@ -42,18 +42,19 @@ const SubmitStory = ({errors, touched, values, status }) => {
                <p className='error'>{errors.title}</p>
            )}
 
-            <Field component='textarea' name='story' type='text' placeholder='Enter your story...' />
+            <Field component='textarea' name='contents' type='text' placeholder='Enter your story...' />
 
            {touched.story && errors.story && (
                <p className='error'>{errors.story}</p>
            )}
+ 
 
 
-           <Field  component='textarea' name='comment' type='text' placeholder='Your comment' />
+           {/* <Field  component='textarea' name='comment' type='text' placeholder='Your comment' />
 
            {touched.comment && errors.comment && (
                <p className='error'>{errors.comment}</p>
-           )}
+           )} */}
            
            <button type='submit'>Submit</button>
         </Form>
@@ -67,24 +68,25 @@ const FormikSubmitStory =withFormik({
     mapPropsToValues: ( values ) => {
         console.log('Values', values)
         return {
-            title: values.title || '',
-            story: values.story || '',
             name: values.name || '',
             email: values.email || '',
-            comment: values.comment|| '',
+            title: values.title || '',
+            contents: values.contents || '',
+            pending: 1
+            // comment: values.comment|| '',
         }
     },
     validationSchema: yup.object().shape({
         title: yup.string().required('Fill out this field!'),
-        story: yup.string().required('Fill out this field!'),
+        contents: yup.string().required('Fill out this field!'),
         name: yup.string().required('Fill out this field!'),
         email: yup.string().email('Email not valid!').required()
     }),
 
     handleSubmit(values, { setStatus }) {
-        axios.post('', values)
+        axios.post('https://refu-stories-api.herokuapp.com/stories/', values)
         .then(res => {
-            console.log(res)
+            console.log('Res', res)
             setStatus(res.data);
         })
         .catch(err => console.log(err.response));
