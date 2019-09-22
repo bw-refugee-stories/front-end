@@ -9,14 +9,17 @@ const App = () => {
   useEffect(() => {
     axios.get('https://refu-stories-api.herokuapp.com/stories')
         .then(res => {
-          console.log(res.data);
+          setStory(res.data);
         })
         .catch(err => console.log('Error: ', err))
   }, []);
 
+  console.log(story);
+
   return (
       <div className="App">
         hello
+        <CardList cuento={story} />
       </div>
   );
 };
