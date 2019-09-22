@@ -3,13 +3,6 @@ import { Card } from "semantic-ui-react";
 import Pend from "../Components/Pend.js";
 
 
-const pend =(
-    <p>
-        <Icon name="circle outline" />
-        Pending
-    </p>
-);
-
 const CardForStories = (props) => (
     <Card
         header={props.title}

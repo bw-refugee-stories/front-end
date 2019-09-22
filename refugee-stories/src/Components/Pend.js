@@ -3,7 +3,7 @@ import { Icon } from "semantic-ui-react";
 
 const Pend = (props) => (
     <p>
-        <Icon name="circle outline"/>
+        <Icon name="server"/>
         {props.pending}
     </p>
 );
