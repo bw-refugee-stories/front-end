@@ -7,7 +7,7 @@ const CardList = (props) => (
             return <CardForStories
                         key={item.id}
                         title={item.title}
-                        name={`${item.name} - ${item.email}`}
+                        name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}
                         contents={item.contents}
                     />
         })}
