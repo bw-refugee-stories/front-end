@@ -5,9 +5,6 @@ import {Form, Field,  withFormik} from 'formik';
 // import Button from '../Button/Button';
 // import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
-
-// import MoleculeTextareaField from '@s-ui/react-molecule-textarea-field';
-// import MoleculeInputField from '@s-ui/react-molecule-input-field';
 import * as yup from 'yup';
 
 
