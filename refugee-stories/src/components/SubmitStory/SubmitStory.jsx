@@ -2,29 +2,40 @@ import React, { useState, useEffect } from 'react';
 import '../../index.css'
 import axios from 'axios';
 import {Form, Field,  withFormik} from 'formik';
+// import Button from '../Button/Button';
+// import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
+
 // import MoleculeTextareaField from '@s-ui/react-molecule-textarea-field';
 // import MoleculeInputField from '@s-ui/react-molecule-input-field';
 import * as yup from 'yup';
 
 
-const SubmitStory = ({errors, touched, values, status }) => {
+const SubmitStory = ({errors, touched, values, status, handleReset }) => {
 
     const [stories, setStories] = useState([]);
-    console.log('this is touched', touched);
+    const [isLoading, setLoading] = useState(false);
+    // console.log('this is touched', touched);
 
     useEffect(() => {
         if(status) {
             setStories([...stories, status]);
+            setLoading(true);
         }
+        setTimeout(() => {
+            setLoading(false);
+            handleReset();
+           }, 3000);
          // eslint-disable-next-line react-hooks/exhaustive-deps 
     }, [status]);
+
 
     return (  
         <div className='story-form'>
             <h2>Tell Us Your Story!</h2>
 
         <Form>
-           <Field component= 'input' name='name' type='text' placeholder='Your name' />
+           <Field name='name' type='text' placeholder='Your name' />
 
            {touched.name && errors.name && (
                <p className='error'>{errors.name}</p>
@@ -48,15 +59,13 @@ const SubmitStory = ({errors, touched, values, status }) => {
                <p className='error'>{errors.story}</p>
            )}
  
-
-
-           {/* <Field  component='textarea' name='comment' type='text' placeholder='Your comment' />
-
-           {touched.comment && errors.comment && (
-               <p className='error'>{errors.comment}</p>
-           )} */}
            
-           <button type='submit'>Submit</button>
+           <div style={{marginTop: '40px'}}>
+            <button className='button' type='submit'>
+                {isLoading && <span>Submitting the story...</span>}
+                {!isLoading && <span>Submit Your Story</span>}
+            </button>
+           </div>
         </Form>
         
        </div>
@@ -66,7 +75,7 @@ const SubmitStory = ({errors, touched, values, status }) => {
 
 const FormikSubmitStory =withFormik({
     mapPropsToValues: ( values ) => {
-        console.log('Values', values)
+        // console.log('Values', values)
         return {
             name: values.name || '',
             email: values.email || '',
@@ -83,8 +92,9 @@ const FormikSubmitStory =withFormik({
         email: yup.string().email('Email not valid!').required()
     }),
 
+
     handleSubmit(values, { setStatus }) {
-        axios.post('https://refu-stories-api.herokuapp.com/stories/', values)
+       axios.post('https://refu-stories-api.herokuapp.com/stories/', values)
         .then(res => {
             console.log('Res', res)
             setStatus(res.data);
@@ -93,5 +103,6 @@ const FormikSubmitStory =withFormik({
     }
 
 }) (SubmitStory)
- 
+
+
 export default FormikSubmitStory;

@@ -7,6 +7,9 @@ import TabNav from './components/TabNav/TabNav';
 
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <section className='app-header'>
@@ -17,6 +20,11 @@ function App() {
       <Route path='/submitstory' render={props => <SubmitStory {...props}/>} />
     </Switch> */}
       </section>
+      {/* <div>
+        <Button
+          isLoading={isButtonLoading}
+          onClick={() => setButtonLoading(true)} />
+      </div> */}
     </div>
   );
 }
