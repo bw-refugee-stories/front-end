@@ -59,8 +59,8 @@ const SubmitStory = ({errors, touched, values, status, handleReset }) => {
            
            <div style={{marginTop: '40px'}}>
             <button className='button' type='submit'>
-                {isLoading && <span>Submitting the story...</span>}
-                {!isLoading && <span>Submit Your Story</span>}
+                {isLoading && <h3>Submitting the story...</h3>}
+                {!isLoading && <h3>Submit Your Story</h3>}
             </button>
            </div>
         </Form>
