@@ -18,7 +18,6 @@ const App = () => {
 
   return (
       <div className="App">
-        hello
         <CardList cuento={story} />
       </div>
   );

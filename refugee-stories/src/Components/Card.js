@@ -8,7 +8,7 @@ const CardForStories = (props) => (
         header={props.title}
         meta={props.name} // remember to add props.email
         description={props.contents}
-        extra={Pend}
+        extra={ <Pend pending={props.pend} /> }
     />
 );
 
