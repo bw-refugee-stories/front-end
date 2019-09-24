@@ -4,11 +4,11 @@
     <list default="true" id="02282d2a-ff6f-4ec4-81a3-5db019b1cdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppStories.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Pend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentsForStories/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentsForStories/CardList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentsForStories/Pend.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569125420815</updated>
       <workItem from="1569125427302" duration="8957000" />
-      <workItem from="1569261234318" duration="2302000" />
+      <workItem from="1569261234318" duration="3120000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 import React from "react";
 import CardForStories from "./Card";
 import { Header } from "semantic-ui-react";
-import "../App.css";
+import "../AppStories.css";
 
 const CardList = (props) => (
     <div className="card-cont">

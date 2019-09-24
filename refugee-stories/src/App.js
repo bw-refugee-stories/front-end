@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './AppStories.css';
 import axios from "axios";
-import CardList from "./Components/CardList";
+import CardList from "./ComponentsForStories/CardList";
 
 const App = () => {
   const [story, setStory] = useState([]);
