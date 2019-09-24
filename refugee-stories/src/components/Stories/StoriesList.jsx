@@ -6,7 +6,7 @@ export default function StoriesLIst() {
     const [stories, setStories] = useState([])
     useEffect(() => {
         axios
-        .get('https://rickandmortyapi.com/api/character/')
+        // .get('https://rickandmortyapi.com/api/character/')
         .then(res=> {
             console.log(res)
             setStories(res.data);

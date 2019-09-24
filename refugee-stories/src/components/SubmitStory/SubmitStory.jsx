@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../index.css'
 import axios from 'axios';
-import {Form, Field,  withFormik} from 'formik';
-// import Loader from 'react-loader-spinner';
-
-// import Button from '../Button/Button';
-// import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-
+import {Form, Field,  withFormik } from 'formik';
 import * as yup from 'yup';
 
 
@@ -16,10 +11,8 @@ const SubmitStory = ({errors, touched, values, status, handleReset }) => {
     const [isLoading, setLoading] = useState(false);
     // console.log('this is touched', touched);
 
-   function element() {
-       return (
-        alert ('Thank you for submitting the form!')
-       )
+   const element = () => {
+        alert ('Thank you for submitting your story!')
    }
      
 
@@ -40,8 +33,6 @@ const SubmitStory = ({errors, touched, values, status, handleReset }) => {
     return (  
         <div className='story-form'>
             <h2>Tell Us Your Story!</h2>
-         <div className='thanks-div'></div>
-
         <Form>
            <Field name='name' type='text' placeholder='Your name' />
 
@@ -103,7 +94,7 @@ const FormikSubmitStory =withFormik({
 
 
     handleSubmit(values, { setStatus }) {
-       axios.post('https://refu-stories-api.herokuapp.com/stories/', values)
+        axios.post('https://refu-stories-api.herokuapp.com/stories/', values)
         .then(res => {
             console.log('Res', res)
             setStatus(res.data);
@@ -117,3 +108,4 @@ const FormikSubmitStory =withFormik({
 
 
 export default FormikSubmitStory;
+
