@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import { Route, Switch, Link } from 'react-router-dom';
+// import Home from './components/Home/Home';
+// import SubmitStory from './components/SubmitStory/SubmitStory';
+import TabNav from './components/TabNav/TabNav';
+
 
 function App() {
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='app-header'>
+          <h1>Refugee Stories</h1>
+      <TabNav />
+    {/* <Switch>
+      <Route exact path='/' render={props => <Home {...props}/>} />
+      <Route path='/submitstory' render={props => <SubmitStory {...props}/>} />
+    </Switch> */}
+      </section>
+      {/* <div>
+        <Button
+          isLoading={isButtonLoading}
+          onClick={() => setButtonLoading(true)} />
+      </div> */}
     </div>
   );
 }
