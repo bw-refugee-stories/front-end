@@ -1,0 +1,19 @@
+{"type":
+"FeatureCollection",
+"features":
+
+[
+    {"type":"Feature","properties":{},
+"geometry":{"type":"Point",
+"coordinates":[-74.0114164352417,40.70462347898018]}
+},
+
+{"type":"Feature",
+"properties":{},
+"geometry":{"type":"Point",
+"coordinates":[-73.98565918207169,40.74841927463572]},
+"name":"Human Rights Watch"
+  }
+ ]
+
+}
