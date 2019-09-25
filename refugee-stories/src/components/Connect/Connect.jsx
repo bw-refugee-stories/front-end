@@ -4,22 +4,6 @@ import { api_key } from '../../data/data';
 import CurrentLocation from './Map';
 
 
-const MarkersList = props => {
-  const { locations, ...markerProps } = props;
-  return (
-    <span>
-      {locations.map((location, i) => {
-        return (
-          <Marker
-            key={i}
-            {...markerProps}
-            position={{ lat: location.lat(), lng: location.lng() }}
-          />
-        );
-      })}
-    </span>
-  );
-};
 
 // function MapContainer({showingInfoWindow, activeMarker, selectedPlace, locations}) {
 //   const [state, setState]
@@ -35,30 +19,15 @@ export class MapContainer extends Component {
       locations: [],
       showingName: false
     };
-    // this.handleMapClick = this.handleMapClick.bind(this);
   }
 
-  // state = {
-  //   showingInfoWindow: false,
-  //   activeMarker: {},
-  //   selectedPlace: {}
-  // };
-
-  // handleMapClick = (ref, map, ev) => {
-  //   const location = ev.latLng;
-  //   this.setState(prevState => ({
-  //     locations: [...prevState.locations, location]
-  //   }));
-  //   map.panTo(location);
-  // };
 
 
-  onMarkerClick = (props, marker, name, e) =>
+  onMarkerClick = (props, marker, e) =>
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true,
-      showingName: true
     },
     );
 
@@ -84,7 +53,6 @@ export class MapContainer extends Component {
               <h4>{this.state.selectedPlace.name}</h4>
             </div>
           </InfoWindow>
-          <MarkersList locations={this.state.locations} icon="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png" />
       </CurrentLocation>
     );
   }

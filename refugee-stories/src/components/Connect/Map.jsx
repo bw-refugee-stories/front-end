@@ -9,12 +9,15 @@ const mapStyles = {
   }
 };
 
+
+
 export class CurrentLocation extends React.Component {
 
     constructor(props) {
         super(props);
     
         const { lat, lng } = this.props.initialCenter;
+        
         this.state = {
           currentLocation: {
             lat: lat,
