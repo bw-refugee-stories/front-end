@@ -15,16 +15,7 @@ function App() {
       <section className='app-header'>
           <h1>Refugee Stories</h1>
       <TabNav />
-    {/* <Switch>
-      <Route exact path='/' render={props => <Home {...props}/>} />
-      <Route path='/submitstory' render={props => <SubmitStory {...props}/>} />
-    </Switch> */}
       </section>
-      {/* <div>
-        <Button
-          isLoading={isButtonLoading}
-          onClick={() => setButtonLoading(true)} />
-      </div> */}
     </div>
   );
 }
