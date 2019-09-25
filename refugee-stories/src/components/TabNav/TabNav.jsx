@@ -2,6 +2,8 @@ import React from "react";
 import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
+import LoginForm from '../LoginForm';
+
 // import { NavLink } from "react-router-dom";
 
 
@@ -16,6 +18,11 @@ import { Tab } from "semantic-ui-react";
           render: () => 
           <SubmitStory attached={false}>Submit Your Story</SubmitStory>,
         },
+        {
+          menuItem: 'Admin Login',
+          render: () =>
+          <LoginForm attached={false}>Admin Login</LoginForm>
+        }
         // {
         //   menuItem: 'Tab 3',
         //   render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
