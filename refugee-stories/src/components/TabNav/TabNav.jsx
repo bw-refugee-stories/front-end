@@ -3,6 +3,7 @@ import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
 // import { NavLink } from "react-router-dom";
+import CardList from "../Stories/CardList";
 
 
 
@@ -16,11 +17,12 @@ import { Tab } from "semantic-ui-react";
           render: () => 
           <SubmitStory attached={false}>Submit Your Story</SubmitStory>,
         },
-        // {
-        //   menuItem: 'Tab 3',
-        //   render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-        // },
-      ]
+        {
+          menuItem: 'Stories',
+          // render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+            render: () => <CardList attatched={false}>Stories</CardList>,
+        },
+      ];
 
     const TabNav = () => <Tab menu={{ pointing: true }} panes={panes} />
 

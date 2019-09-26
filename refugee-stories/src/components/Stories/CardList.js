@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import CardForStories from "./Card";
+import CardForStories from "./CardForStories.js";
 import { Header } from "semantic-ui-react";
-import "../AppStories.css";
+import "../../AppStories.css";
 
 
 const CardList = () => {

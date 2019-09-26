@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 import Pend from ".//Pend.js";
+import "../../AppStories.css";
 
 
 const CardForStories = (props) => (
