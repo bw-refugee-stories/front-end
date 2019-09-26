@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios"
 import CardForStories from "./Card";
 import { Header } from "semantic-ui-react";
 import "../AppStories.css";
+
 
 const CardList = () => {
     const [story, setStory] = useState([]);
