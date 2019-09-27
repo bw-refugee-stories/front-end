@@ -27,7 +27,6 @@ const CardList = () => {
                     title={item.title}
                     name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}
                     contents={item.contents}
-                    pending={item.pending}
                 />
             })}
         </div>
@@ -37,5 +36,18 @@ const CardList = () => {
 
 
 
-
 export default CardList;
+
+{/*<div className="card-cont">*/}
+{/*    <Header className="story-head" as="h1">Stories</Header>*/}
+{/*    {story.map(item => {*/}
+{/*        return <CardForStories*/}
+{/*            className="card"*/}
+{/*            key={item.id}*/}
+{/*            title={item.title}*/}
+{/*            name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}*/}
+{/*            contents={item.contents}*/}
+{/*            pending={item.pending}*/}
+{/*        />*/}
+{/*    })}*/}
+{/*</div>*/}

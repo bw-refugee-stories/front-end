@@ -1,15 +1,26 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
-import Pend from ".//Pend.js";
+import { Card, Button } from "semantic-ui-react";
 
 
 const CardForStories = (props) => (
-    <Card
-        header={props.title}
-        meta={props.name} // remember to add props.email
-        description={props.contents}
-        extra={ <Pend pending={props.pend} /> }
-    />
-);
+    <Card>
+        <Card.Content>
+            <Card.Header>{props.title}</Card.Header>
+            <Card.Meta>{props.name}</Card.Meta>
+            <Card.Description>{props.contents}</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+            <Button basic color="green">Approve</Button>
+            <Button basic color="red">Decline</Button>
+        </Card.Content>
+    </Card>
+    );
 
 export default CardForStories;
+
+{/*<Card*/}
+{/*    header={props.title}*/}
+{/*    meta={props.name} // remember to add props.email*/}
+{/*    description={props.contents}*/}
+{/*    // extra={ <Pend pending={props.pend} /> }*/}
+{/*/>*/}
