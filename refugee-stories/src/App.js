@@ -22,6 +22,7 @@ function App() {
         .catch(err => console.log('Error: ', err))
   }, []);
 
+  console.log(story);
   return (
     <div className="App">
       <section className='app-header'>
