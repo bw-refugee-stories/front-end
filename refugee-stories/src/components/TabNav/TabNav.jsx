@@ -3,6 +3,7 @@ import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
 import LoginForm from '../LoginForm';
+import CardList from '../Stories/CardList';
 
 // import { NavLink } from "react-router-dom";
 
@@ -22,11 +23,19 @@ import LoginForm from '../LoginForm';
           menuItem: 'Admin Login',
           render: () =>
           <LoginForm attached={false}>Admin Login</LoginForm>
+        },
+
+        {
+          menuItem: 'Stories Pending',
+          render: () =>
+          <CardList attached={false}>Stories Pending</CardList>
         }
-        // {
-        //   menuItem: 'Tab 3',
-        //   render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-        // },
+
+      
+        //  {
+        //    menuItem: 'Tab 3',
+        //    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+        //  },
       ]
 
     const TabNav = () => <Tab menu={{ pointing: true }} panes={panes} />
