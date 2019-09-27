@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios"
+import React from "react";
+
 import CardForStories from "./CardForStories";
 import { Header } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import "../../AppStories.css"
 
+const HomeLink =styled.h3`
+    text-align: center;
+    padding: 20px;
+`;
 
-const CardList = () => {
-    const [story, setStory] = useState([]);
-
-    useEffect(() => {
-        axios.get('https://refu-stories-api.herokuapp.com/stories')
-            .then(res => {
-                setStory(res.data);
-            })
-            .catch(err => console.log('Error: ', err))
-    }, []);
-
-
+const CardList = (props) => {
     return (
         <div className="card-cont">
             <Header className="story-head" as="h1">Stories</Header>
-            {story.map(item => {
+            <HomeLink>
+                <Link to="/">Home</Link>
+            </HomeLink>
+            {props.data.map(item => {
                 return <CardForStories
                     className="card"
                     key={item.id}
@@ -29,6 +27,9 @@ const CardList = () => {
                     contents={item.contents}
                 />
             })}
+            <HomeLink>
+                <Link to="/">Home</Link>
+            </HomeLink>
         </div>
     );
 };

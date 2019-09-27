@@ -7,6 +7,7 @@
     "@s-ui/react-molecule-textarea-field": "^2.1.0",
     "axios": "^0.19.0",
     "formik": "^1.5.8",
+    "google-map-react": "^1.1.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-loader-spinner": "^3.1.4",
@@ -16,6 +17,7 @@
     "semantic-ui": "^2.4.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1",
+    "styled-components": "^4.4.0",
     "yup": "^0.27.0"
   },
   "scripts": {
