@@ -4,7 +4,7 @@ import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
 import LoginForm from '../LoginForm';
 import CardList from '../Stories/CardList';
-
+import MapContainer from '../Connect/Connect';
 // import { NavLink } from "react-router-dom";
 
 
@@ -29,7 +29,12 @@ import CardList from '../Stories/CardList';
           menuItem: 'Stories Pending',
           render: () =>
           <CardList attached={false}>Stories Pending</CardList>
-        }
+        },
+        {
+          menuItem: 'Connect',
+          render: () => 
+          <MapContainer attached={false}>Connect Content</MapContainer>,
+      }
 
       
         //  {
