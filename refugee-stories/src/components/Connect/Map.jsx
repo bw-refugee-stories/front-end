@@ -89,7 +89,7 @@ componentDidUpdate(prevProps, prevState) {
         }
       );
 
-      // maps.Map() is constructor that instantiates the map
+      // maps.Map() is constructor that instantiates the map///
       this.map = new maps.Map(node, mapConfig);
     }
   }
