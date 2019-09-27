@@ -27,7 +27,7 @@ const CardList = () => {
                     title={item.title}
                     name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}
                     contents={item.contents}
-                    pending={item.pending}
+                    pend={item.pending}
                 />
             })}
         </div>
