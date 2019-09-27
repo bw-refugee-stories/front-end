@@ -24,7 +24,7 @@ import { Redirect } from 'react-router-dom';
 
       renderRedirect = () => {
         if (this.state.redirect) {
-          return <Redirect to='/CardList' />
+          return <Redirect to='/pending' />
         }
       }
 
