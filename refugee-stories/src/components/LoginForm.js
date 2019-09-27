@@ -16,9 +16,15 @@ import { Redirect } from 'react-router-dom';
           }
       }
 
+      setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+
       renderRedirect = () => {
         if (this.state.redirect) {
-          return <Redirect to='/target' />
+          return <Redirect to='/CardList' />
         }
       }
 
@@ -32,7 +38,8 @@ import { Redirect } from 'react-router-dom';
           return axios.post('https://cors-anywhere.herokuapp.com/http://refu-stories-api.herokuapp.com/users/login', user)
             .then((res) => {
                 localStorage.setItem('token', res.data.token)
-                this.props.history.push('/stories')
+                this.renderRedirect()
+               
               })
 
             }
@@ -56,6 +63,8 @@ import { Redirect } from 'react-router-dom';
                 console.log(err)
             })
     }
+
+
     
       render (){ 
         const {username,password} = this.state
