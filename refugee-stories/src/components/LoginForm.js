@@ -1,48 +1,16 @@
 import React from "react";
-// import ReactDOM from 'react-dom';
-// import { Link } from 'react-router';
-import {Button, Icon } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
    class LoginForm extends React.Component {
-      
 
         constructor() {
           super()
           this.state = {
               username: '',
-              password: '', redirect:false
+              password: '', 
           }
       }
-
-      setRedirect = () => {
-        this.setState({
-          redirect: true
-        })
-      }
-
-      renderRedirect = () => {
-        if (this.state.redirect) {
-          return <Redirect to='/pending' />
-        }
-      }
-
-
-
-      login = (username, password) => {
-          const user = {
-            username,
-            password
-          }
-          return axios.post('https://cors-anywhere.herokuapp.com/http://refu-stories-api.herokuapp.com/users/login', user)
-            .then((res) => {
-                localStorage.setItem('token', res.data.token)
-                this.renderRedirect()
-               
-              })
-
-            }
 
 
       handleChanges = e => {
@@ -55,13 +23,14 @@ import { Redirect } from 'react-router-dom';
       submit = e => {
         e.preventDefault()
         const {username, password} = this.state
-        this.login(username, password)
-            .then(() => {
-                this.props.history.push("/")
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        axios.post('https://refu-stories-api.herokuapp.com/users/admin/login', {username, password})
+        .then((res) => {
+          localStorage.setItem('token', res.data.token)
+          this.props.history.push("/pending")
+        })
+        .catch((err) => {
+          console.log( 'err.response', err.response );          
+        })
     }
 
 
@@ -72,7 +41,7 @@ import { Redirect } from 'react-router-dom';
           <h1> Admin Login  </h1>
   
           <br></br>
-          
+          <form onSubmit={this.submit}>
           <div className="ui icon input">
             <input type = 'text' name = 'username' placeholder = 'Username' value = {username} onChange = {this.handleChanges}  />
             <i aria-hidden="true" className="users icon"></i>
@@ -91,14 +60,16 @@ import { Redirect } from 'react-router-dom';
           <br></br>
           
           
-          <Button color='teal' animated onClick = {this.submit} >
+          <Button color='teal' animated type="submit" >
             <Button.Content visible>Login</Button.Content>
             <Button.Content hidden>
               <Icon name='arrow right' />
             </Button.Content>
-          </Button>
+            </Button>   
+          </form>
           
-        </div>)
+        </div>
+        )
       }
     };
 
