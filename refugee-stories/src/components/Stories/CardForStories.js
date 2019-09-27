@@ -18,9 +18,3 @@ const CardForStories = (props) => (
 
 export default CardForStories;
 
-{/*<Card*/}
-{/*    header={props.title}*/}
-{/*    meta={props.name} // remember to add props.email*/}
-{/*    description={props.contents}*/}
-{/*    // extra={ <Pend pending={props.pend} /> }*/}
-{/*/>*/}

@@ -1,5 +1,5 @@
-import React, { Component, useState, useEffect } from 'react';
-import { GoogleApiWrapper, InfoWindow, Marker, Map } from 'google-maps-react';
+import React from 'react';
+import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import { api_key } from '../../data/data';
 import CurrentLocation from './Map';
 
@@ -9,7 +9,7 @@ import CurrentLocation from './Map';
 //   const [state, setState]
 // }
 
-export class MapContainer extends Component {
+export class MapContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

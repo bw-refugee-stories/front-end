@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router';
-import {Button, Icon, Card} from 'semantic-ui-react';
+// import ReactDOM from 'react-dom';
+// import { Link } from 'react-router';
+import {Button, Icon } from 'semantic-ui-react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
