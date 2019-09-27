@@ -36,7 +36,7 @@ import { Link } from "react-router-dom";
           render: () =>
               <Tab.Pane>
                   {/*<CardList attached={false}>*/}
-                  <Link to="/pending">Stories</Link>
+                  <Link to="/stories">Stories</Link>
                   {/*Stories Pending</CardList>*/}
               </Tab.Pane>
         },

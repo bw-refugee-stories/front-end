@@ -8,6 +8,7 @@ import LoginForm from './components/LoginForm';
 import CardList from './components/Stories/CardList';
 import Connect from './components/Connect/Connect';
 import TabNav from './components/TabNav/TabNav';
+import PendingStories from "./components/Stories/PendingStories";
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
       <Route exact path='/' render={props => <TabNav {...props}/>} />
       <Route path='/submitstory' render={props => <SubmitStory {...props}/>} />
       <Route path='/admin' render={props => <LoginForm {...props}/>} />
-      <Route path='/pending' render={props => <CardList {...props} data={story}/>} />
+      <Route path='/pending' render={props => <PendingStories {...props} data={story}/>} />
+      <Route path='/stories' render={props => <CardList {...props} data={story}/>} />
       <Route path='/connect' render={props => <Connect {...props}/>} />
     </Switch>
       </section>
