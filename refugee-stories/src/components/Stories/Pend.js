@@ -1,5 +1,6 @@
 import React from "react";
-import { Icon } from "semantic-ui-react";
+import {Icon} from "semantic-ui-react";
+
 
 const Pend = (props) => (
     <p>
