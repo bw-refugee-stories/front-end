@@ -1,8 +1,7 @@
 import React from "react";
-
-import CardForStories from "./CardForStories";
-import { Header } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import PendingCard from "./PendingCard.js";
+import {Header} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import "../../AppStories.css"
 
@@ -11,7 +10,8 @@ const HomeLink =styled.h3`
     padding: 20px;
 `;
 
-const CardList = (props) => {
+
+const PendingStories = (props) => {
     return (
         <div className="card-cont">
             <Header className="story-head" as="h1">Stories</Header>
@@ -19,7 +19,7 @@ const CardList = (props) => {
                 <Link to="/">Home</Link>
             </HomeLink>
             {props.data.map(item => {
-                return <CardForStories
+                return <PendingCard
                     className="card"
                     key={item.id}
                     title={item.title}
@@ -34,8 +34,4 @@ const CardList = (props) => {
     );
 };
 
-
-
-
-export default CardList;
-
+export default PendingStories;

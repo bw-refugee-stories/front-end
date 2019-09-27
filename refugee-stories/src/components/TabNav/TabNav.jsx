@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
         },
         {
           menuItem: 'Submit Your Story',
-          render: () => 
+          render: () =>
           <SubmitStory attached={false}>
           <Link to="/submitstory">Submit Story</Link>
           Submit Your Story</SubmitStory>,
@@ -32,11 +32,13 @@ import { Link } from "react-router-dom";
         },
 
         {
-          menuItem: 'Stories Pending',
+          menuItem: 'Stories',
           render: () =>
-          <CardList attached={false}>
-          <Link to="/pending">Stories Pending</Link>
-          Stories Pending</CardList>
+              <Tab.Pane>
+                  {/*<CardList attached={false}>*/}
+                  <Link to="/stories">Stories</Link>
+                  {/*Stories Pending</CardList>*/}
+              </Tab.Pane>
         },
         {
           menuItem: 'Connect',

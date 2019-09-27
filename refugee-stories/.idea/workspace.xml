@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ef51b41-c402-4f8b-abca-1521a135f589" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Stories/PendingCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Stories/PendingStories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Stories/CardForStories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stories/CardForStories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stories/CardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stories/CardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stories/Pend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stories/Pend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TabNav/TabNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabNav/TabNav.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +22,9 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -48,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569285003927</updated>
       <workItem from="1569285008464" duration="1864000" />
+      <workItem from="1569608673933" duration="4903000" />
     </task>
     <servers />
   </component>
@@ -59,7 +65,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
