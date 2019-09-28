@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch, Link } from 'react-router-dom';
-import Home from './components/Home/Home';
+import { Route, Switch } from 'react-router-dom';
+// import Home from './components/Home/Home';
 import SubmitStory from './components/SubmitStory/SubmitStory';
 import LoginForm from './components/LoginForm';
 import CardList from './components/Stories/CardList';

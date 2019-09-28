@@ -1,5 +1,6 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
+import { withRouter } from 'react-router-dom';
 // import { Link } from 'react-router';
 import {Button, Icon } from 'semantic-ui-react';
 import axios from 'axios';
@@ -57,7 +58,7 @@ import { Redirect } from 'react-router-dom';
         const {username, password} = this.state
         this.login(username, password)
             .then(() => {
-                this.props.history.push("/")
+                this.props.history.push("/pending")
             })
             .catch((err) => {
                 console.log(err)
@@ -72,7 +73,7 @@ import { Redirect } from 'react-router-dom';
           <h1> Admin Login  </h1>
   
           <br></br>
-          
+          <form onSubmit={this.submit}>
           <div className="ui icon input">
             <input type = 'text' name = 'username' placeholder = 'Username' value = {username} onChange = {this.handleChanges}  />
             <i aria-hidden="true" className="users icon"></i>
@@ -97,9 +98,9 @@ import { Redirect } from 'react-router-dom';
               <Icon name='arrow right' />
             </Button.Content>
           </Button>
-          
+          </form>
         </div>)
       }
     };
 
-export default LoginForm;
+    export default withRouter(LoginForm);
