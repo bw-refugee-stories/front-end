@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
     const panes = [
         {
           menuItem: 'Home', render: () => <Home>
+            <Link to="/">TabNav</Link>
             <h1 className="main-title">Voices of Refugees</h1>
           </Home>
         },
