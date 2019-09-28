@@ -8,6 +8,7 @@
     "axios": "^0.19.0",
     "formik": "^1.5.8",
     "google-map-react": "^1.1.5",
+    "jest": "^24.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-loader-spinner": "^3.1.4",

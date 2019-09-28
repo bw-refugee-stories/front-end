@@ -86,6 +86,22 @@ code {
  
 }
 
+@media only screen and (max-width: 500px) {
+  .ui.menu {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ui.menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+}
 
 
 button {
@@ -171,4 +187,12 @@ justify-content: space-around;
 
 textarea:hover {
   transform: translateY(-4px) scale(1.03);
+}
+
+.card-cont {
+  /* margin: 0 auto; */
+  display: flex;
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  /* align-items: center; */
 }
