@@ -38,6 +38,7 @@ import { Redirect } from 'react-router-dom';
           }
           return axios.post('https://cors-anywhere.herokuapp.com/http://refu-stories-api.herokuapp.com/users/login', user)
             .then((res) => {
+              console.log('token:', res.data.token)
                 localStorage.setItem('token', res.data.token)
                 this.renderRedirect()
                

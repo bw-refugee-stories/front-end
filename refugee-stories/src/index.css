@@ -196,3 +196,8 @@ textarea:hover {
   justify-content: center;
   /* align-items: center; */
 }
+
+.home-page {
+  display:flex;
+  flex-direction: column;
+}

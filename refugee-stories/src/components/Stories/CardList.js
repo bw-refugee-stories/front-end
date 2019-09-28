@@ -11,7 +11,7 @@ const CardList = () => {
     const [story, setStory] = useState([]);
 
     useEffect(() => {
-        axios.get('https://refu-stories-apiherokuapp.com/stories/a/pending')
+        axios.get('https://refu-stories-api.herokuapp.com/stories')
             .then(res => {
                 setStory(res.data);
                 console.log('data', res)
@@ -27,7 +27,7 @@ const CardList = () => {
 
     return (
         <div className="card-cont">
-            <Header className="story-head" as="h1">Stories</Header>
+            {/* <Header className="story-head" as="h1">Stories</Header> */}
             <Link className='home-page' to="/">Home</Link>
             {story.map(item => 
                 <CardForStories

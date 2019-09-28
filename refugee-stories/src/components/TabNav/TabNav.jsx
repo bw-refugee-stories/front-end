@@ -32,13 +32,13 @@ import { Link } from "react-router-dom";
 
         },
 
-        {
-          menuItem: 'Stories Pending',
-          render: () =>
-          <CardList attached={false}>
-          <Link to="/pending">Stories Pending</Link>
-          Stories Pending</CardList>
-        },
+        // {
+        //   menuItem: 'Stories Pending',
+        //   render: () =>
+        //   <CardList attached={false}>
+        //   <Link to="/pending">Stories Pending</Link>
+        //   Stories Pending</CardList>
+        // },
         {
           menuItem: 'Connect',
           render: () => 
