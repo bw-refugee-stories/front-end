@@ -22,7 +22,7 @@ function App() {
       <Route path='/submitstory' render={props => <SubmitStory {...props}/>} />
       <Route path='/admin' render={props => <LoginForm {...props}/>} />
       <Route path='/pending' render={props => <CardList {...props}/>} />
-      <Route path='/connect' render={props => <Connect {...props}/>} />
+      {/* <Route path='/connect' render={props => <Connect {...props}/>} /> */}
     </Switch>
       </section>
     </div>

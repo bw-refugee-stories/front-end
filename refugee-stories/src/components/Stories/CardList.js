@@ -9,6 +9,7 @@ import '../../index.css';
 
 const CardList = () => {
     const [story, setStory] = useState([]);
+    // const [refreshCount, setRefreshCount] = useState(0);
 
     useEffect(() => {
         axios.get('https://refu-stories-api.herokuapp.com/stories')
@@ -17,10 +18,15 @@ const CardList = () => {
                 console.log('data', res)
             })
             .catch(err => console.log('Error: ', err))
-    }, []);
+    }, [story]);
 
     const handleRemoveStory = (id) => {
-        setStory(story.filter (s => s.id !== id))
+        axios.delete(`https://refu-stories-api.herokuapp.com/stories/${id}`)
+            .then (res => {
+               console.log(res.data)
+               setStory([])
+            } )
+            .catch(err => console.log('Error: ', err))
         
       }
 
@@ -36,7 +42,7 @@ const CardList = () => {
                     title={item.title}
                     name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}
                     contents={item.contents} 
-                    removeStory={handleRemoveStory} 
+                    removeStory={() => handleRemoveStory(item.id)} 
                 />
             )}
             
