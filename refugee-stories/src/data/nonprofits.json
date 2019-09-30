@@ -1,0 +1,85 @@
+{
+    "type" : "FeatureCollection" ,
+    "crs" :{
+        "type" : "name" ,
+        "properties" :{
+            "name" : "Vlad Burlutsky's refugee non-profits data"
+        }
+    },
+
+    "features" :[
+
+        {
+            "type" : "Feature" ,
+            "properties" :{
+                    "ORG_ID" : 1 ,
+                    "NAME" : "Human Rights First" ,
+                    "ADDRESS" : "75 Broad St 31st Floor, New York, NY 10004" ,
+                    "ACCESSIBLE" : "yes / yes" ,
+                    "OPEN" : null ,
+                    "NOTES" : "Indoor" ,
+                    "MODIFIED_D" : "2019/09/30" ,
+                    "CREATED_DA" : null ,
+                    "DESCRIPTION" : "We believe American leadership is essential in the global struggle for human rights, so we press the U.S. government and private companies to respect human rights and the rule of law" ,
+                    "URL" : "https://www.humanrightsfirst.org/" ,
+                    "PICTURE__1" : null
+            },
+            "geometry" :{
+            "type" : "Point" ,
+            "coordinates" :[
+                -74.0114164352417 ,
+                40.70462347898018
+                ]
+            }
+        },
+
+        {
+            "type" : "Feature" ,
+            "properties" :{
+                    "ORG_ID" : 2 ,
+                    "NAME" : "Human Rights Watch" ,
+                    "ADDRESS" : "350 Fifth Avenue, 34th Floor | New York, NY 10118-3299 USA" ,
+                    "ACCESSIBLE" : "yes / yes" ,
+                    "OPEN" : null ,
+                    "NOTES" : "Indoor" ,
+                    "MODIFIED_D" : "2019/09/30" ,
+                    "CREATED_DA" : null ,
+                    "DESCRIPTION" : "Human Rights Watch investigates and reports on abuses happening in all corners of the world. " ,
+                    "URL" : "https://www.hrw.org/" ,
+                    "PICTURE__1" : null
+            },
+            "geometry" :{
+            "type" : "Point" ,
+            "coordinates" :[
+                -73.98565918207169 ,
+                40.74841927463572
+                ]
+            }
+        },
+
+        {
+            "type" : "Feature" ,
+            "properties" :{
+                    "ORG_ID" : 3 ,
+                    "NAME" : "Ansob Center for Refugees" ,
+                    "ADDRESS" : "28-19 Steinway St 2nd Floor, Astoria, NY 11103" ,
+                    "ACCESSIBLE" : "yes / yes" ,
+                    "OPEN" : null ,
+                    "NOTES" : "Indoor" ,
+                    "MODIFIED_D" : "2019/09/30" ,
+                    "CREATED_DA" : null ,
+                    "DESCRIPTION" : "The Ansob Center for Refugees offers a wide variety of direct services to refugees and immigrants who want to begin the process of rebuilding their lives in the United States. " ,
+                    "URL" : "https://www.ansob.org/" ,
+                    "PICTURE__1" : null
+            },
+            "geometry" :{
+            "type" : "Point" ,
+            "coordinates" :[
+                -73.898570 ,
+                40.786540
+                ]
+            }
+        }
+
+    ]
+}

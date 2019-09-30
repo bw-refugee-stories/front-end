@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import SubmitStory from './components/SubmitStory/SubmitStory';
 import LoginForm from './components/LoginForm';
 import CardList from './components/Stories/CardList';
-import Connect from './components/Connect/Connect';
+// import Connect from './components/Connect/Connect';
 import TabNav from './components/TabNav/TabNav';
 
 

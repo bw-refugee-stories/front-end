@@ -43,7 +43,7 @@ export class MapContainer extends React.Component {
   render() {
     return (
       <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-        <Marker onClick={this.onMarkerClick} name={'current location'} name/>
+        {/* <Marker onClick={this.onMarkerClick} name={'current location'} name/> */}
         <Marker name={'Human Rights First'}
             position={{lat: 40.70462347898018, lng: -74.0114164352417}} />
         <Marker name={'Human Rights Watch'}

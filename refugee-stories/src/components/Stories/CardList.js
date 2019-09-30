@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import CardForStories from "./CardForStories";
-import { Header } from "semantic-ui-react";
+// import { Header } from "semantic-ui-react";
 import "../../AppStories.css"
 import { Link } from "react-router-dom";
 import '../../index.css';

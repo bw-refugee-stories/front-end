@@ -3,10 +3,15 @@ import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
 import LoginForm from '../LoginForm';
-import CardList from '../Stories/CardList';
+// import CardList from '../Stories/CardList';
 import MapContainer from '../Connect/Connect';
 import { Link } from "react-router-dom";
+import Map from '../GoogleMaps/GoogleMaps';
+import { withScriptjs, withGoogleMap } from 'react-google-maps';
+import { api_key } from '../../data/data';
 
+
+const WrappedMap = withScriptjs (withGoogleMap(Map));
 
 
     const panes = [
@@ -18,7 +23,7 @@ import { Link } from "react-router-dom";
         },
         {
           menuItem: 'Submit Your Story',
-          render: () => 
+          render: () =>
           <SubmitStory attached={false}>
           <Link to="/submitstory">Submit Story</Link>
           Submit Your Story</SubmitStory>,
@@ -45,13 +50,19 @@ import { Link } from "react-router-dom";
           <MapContainer attached={false}>
           <Link to="/connect">Connect</Link>
           Connect Content</MapContainer>,
-      }
-
-      
-        //  {
-        //    menuItem: 'Tab 3',
-        //    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-        //  },
+      },
+         {
+           menuItem: 'Google Maps',
+           render: () => 
+           <div style={{width:'100%', height: '100vh'}}>
+            <WrappedMap 
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${api_key}`}
+              loadingElement={<div style={{height: '100%' }} />}
+              containerElement={<div style={{height:'100%' }} />}
+              mapElement={<div style={{height: '100%' }} />}
+              attached={false}>Tab 3 Content</WrappedMap>
+           </div>
+         },
       ]
 
     const TabNav = () => <Tab menu={{ pointing: true }} panes={panes} />
