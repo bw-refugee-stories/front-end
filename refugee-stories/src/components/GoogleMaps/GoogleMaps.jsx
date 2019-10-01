@@ -37,7 +37,7 @@ export default function Map() {
                             }}
                             >
                             <div> 
-                                <h2>{selectedOrg.properties.Name}</h2>
+                                <h2>{selectedOrg.properties.NAME}</h2>
                                 <h3>{selectedOrg.properties.ADDRESS}</h3>
                                 <p>{selectedOrg.properties.DESCRIPTION}</p>
                                 <h4><a href='{selectedOrg.properties.URL}' onClick={(e) => { e.preventDefault();window.open(selectedOrg.properties.URL)}}>{selectedOrg.properties.URL}</a></h4>
