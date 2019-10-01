@@ -79,6 +79,54 @@
                 40.786540
                 ]
             }
+        },
+
+        {
+            "type" : "Feature" ,
+            "properties" :{
+                    "ORG_ID" : 4 ,
+                    "NAME" : "Child Refugee Initiative" ,
+                    "ADDRESS" : "9 CHARLTON ST #2, NEW YORK, NY 10014" ,
+                    "ACCESSIBLE" : "yes / yes" ,
+                    "OPEN" : null ,
+                    "NOTES" : "Indoor" ,
+                    "MODIFIED_D" : "2019/09/30" ,
+                    "CREATED_DA" : null ,
+                    "DESCRIPTION" : "Refugee children deserve the chance to overcome the horrors of dislocation and thrive through the process of resettlement in the United States " ,
+                    "URL" : "http://www.childrefugeeinitiative.org" ,
+                    "PICTURE__1" : null
+            },
+            "geometry" :{
+            "type" : "Point" ,
+            "coordinates" :[
+                -74.003880 ,
+                40.726670
+                ]
+            }
+        },
+
+        {
+            "type" : "Feature" ,
+            "properties" :{
+                    "ORG_ID" : 5 ,
+                    "NAME" : "New York Immigration Coalition" ,
+                    "ADDRESS" : "131 W 33rd St #610, New York, NY 10001" ,
+                    "ACCESSIBLE" : "yes / yes" ,
+                    "OPEN" : null ,
+                    "NOTES" : "Indoor" ,
+                    "MODIFIED_D" : "2019/09/30" ,
+                    "CREATED_DA" : null ,
+                    "DESCRIPTION" : "The New York Immigration Coalition envisions a New York State that is stronger because all people are welcome, treated fairly, and given the chance to pursue their dreams. " ,
+                    "URL" : "https://www.nyic.org/" ,
+                    "PICTURE__1" : null
+            },
+            "geometry" :{
+            "type" : "Point" ,
+            "coordinates" :[
+                -73.898570 ,
+                40.786540
+                ]
+            }
         }
 
     ]

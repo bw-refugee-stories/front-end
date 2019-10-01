@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleApiWrapper, InfoWindow, Marker, Map } from 'google-maps-react';
+import { GoogleApiWrapper,  Marker } from 'google-maps-react';
 import { api_key } from '../../data/data';
 import CurrentLocation from './Map';
 import * as nonprofitsData from '../../data/nonprofits.json';
