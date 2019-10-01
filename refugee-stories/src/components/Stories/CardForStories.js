@@ -10,7 +10,7 @@ const CardForStories = (props) => (
             <Card.Description>{props.contents}</Card.Description>
         </Card.Content>
         <Card.Content extra>
-            <Button basic color="green">Approve</Button>
+            <Button basic color="green" onClick={ () => props.addStory(props.id)}>Approve</Button>
             <Button basic color="red" onClick={ () => props.removeStory(props.id)}>Decline</Button>
         </Card.Content>
     </Card>

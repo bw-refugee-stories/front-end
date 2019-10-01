@@ -9,7 +9,7 @@ import '../../index.css';
 
 const CardList = () => {
     const [story, setStory] = useState([]);
-    // const [refreshCount, setRefreshCount] = useState(0);
+    const [refreshCount, setRefreshCount] = useState(0);
 
     useEffect(() => {
         axios.get('https://refu-stories-api.herokuapp.com/stories')
@@ -18,17 +18,27 @@ const CardList = () => {
                 console.log('data', res)
             })
             .catch(err => console.log('Error: ', err))
-    }, [story]);
+    }, [refreshCount]);
 
     const handleRemoveStory = (id) => {
         axios.delete(`https://refu-stories-api.herokuapp.com/stories/${id}`)
             .then (res => {
                console.log(res.data)
-               setStory([])
+               setRefreshCount(+1)
             } )
+            .catch(err => console.log('Error: ', err))        
+      }
+
+      const handleApproveStory = (id) => {
+        axios.put(`https://cors-anywhere.herokuapp.com/http://refu-stories-api.herokuapp.com/stories/${id}`)
+            .then (res => {
+               console.log('Approve', res.data)
+               setRefreshCount(+1)
+            })
             .catch(err => console.log('Error: ', err))
         
       }
+    
 
 
     return (
@@ -43,6 +53,7 @@ const CardList = () => {
                     name={`Author: ${(item.name !== null) ? item.name : "N/A"}  -  Email: ${(item.email !== null) ? item.email : "N/A"}`}
                     contents={item.contents} 
                     removeStory={() => handleRemoveStory(item.id)} 
+                    addStory={() => handleApproveStory(item.id)} 
                 />
             )}
             
@@ -52,4 +63,5 @@ const CardList = () => {
 
 
 export default CardList;
+
 

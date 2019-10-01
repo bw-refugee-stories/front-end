@@ -127,7 +127,7 @@ componentDidUpdate(prevProps, prevState) {
 export default CurrentLocation;
 
 CurrentLocation.defaultProps = {
-  zoom: 14,
+  zoom: 10,
   initialCenter: {
     lat: 40.7128,
     lng: -74.0060

@@ -40,7 +40,7 @@ export default function Map() {
                                 <h2>{selectedOrg.properties.Name}</h2>
                                 <h3>{selectedOrg.properties.ADDRESS}</h3>
                                 <p>{selectedOrg.properties.DESCRIPTION}</p>
-                                <h4><a href='{selectedOrg.properties.URL}' onClick={(e) => { e.preventDefault();window.open(selectedOrg.properties.URL, '_blank')}}>{selectedOrg.properties.URL}</a></h4>
+                                <h4><a href='{selectedOrg.properties.URL}' onClick={(e) => { e.preventDefault();window.open(selectedOrg.properties.URL)}}>{selectedOrg.properties.URL}</a></h4>
                             </div>
                         </InfoWindow>
                     )}

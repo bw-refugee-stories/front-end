@@ -1,13 +1,9 @@
 import React from 'react';
-import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import { GoogleApiWrapper, InfoWindow, Marker, Map } from 'google-maps-react';
 import { api_key } from '../../data/data';
 import CurrentLocation from './Map';
+import * as nonprofitsData from '../../data/nonprofits.json';
 
-
-
-// function MapContainer({showingInfoWindow, activeMarker, selectedPlace, locations}) {
-//   const [state, setState]
-// }
 
 export class MapContainer extends React.Component {
   constructor(props) {
@@ -23,9 +19,9 @@ export class MapContainer extends React.Component {
 
 
 
-  onMarkerClick = (props, marker, e) =>
+  onClick = ( marker, e, selectedOrg) =>
     this.setState({
-      selectedPlace: props,
+      selectedPlace: null,
       activeMarker: marker,
       showingInfoWindow: true,
     },
@@ -43,16 +39,29 @@ export class MapContainer extends React.Component {
   render() {
     return (
       <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-        {/* <Marker onClick={this.onMarkerClick} name={'current location'} name/> */}
-        <Marker name={'Human Rights First'}
-            position={{lat: 40.70462347898018, lng: -74.0114164352417}} />
-        <Marker name={'Human Rights Watch'}
-            position={{lat: 40.74841927463572, lng: -73.98565918207169}} />
-          <InfoWindow marker={this.state.activeMarker} visible={this.state.showingInfoWindow} onClose={this.onClose}>
-            <div>
-              <h4>{this.state.selectedPlace.name}</h4>
-            </div>
-          </InfoWindow>
+       {nonprofitsData.features.map((nonprofit) => (
+                    <Marker key={nonprofit.properties.ORG_ID} position={{
+                        lat: nonprofit.geometry.coordinates[1],
+                        lng: nonprofit.geometry.coordinates[0]
+                    }}
+                    // onClick={() => {
+                    //         this.setState(nonprofit);
+                    //     }}
+                        icon= {{
+                            url: '/ngo.svg',
+                            scaledSize: new window.google.maps.Size(25, 25)
+                        }}
+                      />
+                    ))}
+              {/* <InfoWindow marker={this.state.activeMarker} visible={this.state.showingInfoWindow} onClose={this.onClose} /> */}
+                            {/* <div> 
+                                <h2>{nonprofit.properties.Name}</h2>
+                                <h3>{nonprofit.properties.ADDRESS}</h3>
+                                <p>{nonprofit.properties.DESCRIPTION}</p>
+                                <h4><a href='{nonprofit.properties.URL}' onClick={(e) => { e.preventDefault();window.open(selectedOrg.properties.URL, '_blank')}}>{selectedOrg.properties.URL}</a></h4>
+                            </div> */}
+             
+        
       </CurrentLocation>
     );
   }

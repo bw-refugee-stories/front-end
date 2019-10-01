@@ -2,7 +2,8 @@ import React from "react";
 import SubmitStory from '../SubmitStory/SubmitStory';
 import Home from '../Home/Home';
 import { Tab } from "semantic-ui-react";
-import LoginForm from '../LoginForm';
+import LoginForm from '../LoginForm/LoginForm';
+import UserForm from '../UserForm/UserForm';
 // import CardList from '../Stories/CardList';
 import MapContainer from '../Connect/Connect';
 import { Link } from "react-router-dom";
@@ -37,13 +38,13 @@ const WrappedMap = withScriptjs (withGoogleMap(Map));
 
         },
 
-        // {
-        //   menuItem: 'Stories Pending',
-        //   render: () =>
-        //   <CardList attached={false}>
-        //   <Link to="/pending">Stories Pending</Link>
-        //   Stories Pending</CardList>
-        // },
+        {
+          menuItem: 'Register',
+          render: () =>
+          <UserForm attached={false}>
+          <Link to="/userform">User Registration</Link>
+          User Registration</UserForm>
+        },
         {
           menuItem: 'Connect',
           render: () => 
