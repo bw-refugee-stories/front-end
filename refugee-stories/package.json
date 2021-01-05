@@ -5,7 +5,7 @@
   "dependencies": {
     "@s-ui/react-molecule-input-field": "^2.2.0",
     "@s-ui/react-molecule-textarea-field": "^2.1.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "formik": "^1.5.8",
     "google-map-react": "^1.1.5",
     "react": "^16.9.0",
